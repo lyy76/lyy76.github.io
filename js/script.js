@@ -23,6 +23,9 @@ counters.forEach((item, i) => {
 });
 
 $(document).ready(function () {
+    $('.modal__close').on('click', function () {
+        $('.overlay, #thanks').fadeOut('slow');
+    });
     $('form').submit(function (e) {
         e.preventDefault();
 
@@ -36,8 +39,8 @@ $(document).ready(function () {
             data: $(this).serialize()
         }).done(function () {
             $(this).find("input").val("");
-            /* $('#contacts, #order').fadeOut();
-            $('.overlay, #thanks').fadeIn('slow'); */
+            /*  $('#contacts, #order').fadeOut(); */
+            $('.overlay, #thanks').fadeIn('slow');
 
             $('form').trigger('reset');
         });
