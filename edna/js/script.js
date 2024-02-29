@@ -201,6 +201,7 @@ function validateForms(form) {
 /* validateForms('#consultation-form');
 validateForms('#write-form'); */
 validateForms('#consultation form');
+validateForms('#contacts-form');
 
 $('input[name=phone]').mask("+38 (999) 999-99-99");
 
