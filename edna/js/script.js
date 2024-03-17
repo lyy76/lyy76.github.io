@@ -124,20 +124,6 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-var arVideos = document.getElementsByTagName('video');
-for (var i = arVideos.length - 1; i >= 0; i--) {
-    var elmVideo = arVideos[i];
-    elmVideo.autoplay = false;
-}
-var v = document.getElementById("movie");
-v.onclick = function () {
-    if (v.paused) {
-        v.play();
-    } else {
-        v.pause();
-    }
-};
-
 $('.reviews__button').each(function (i) {
     $(this).on('click', function () {
 
@@ -239,6 +225,7 @@ $('form').submit(function (e) {
     });
     return false;
 });
+
 $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
         $('.groups').fadeIn();
@@ -282,3 +269,17 @@ $("a[href=#up]").click(function () {
 });
 
 new WOW().init();
+
+var arVideos = document.getElementsByTagName('video');
+for (var i = arVideos.length - 1; i >= 0; i--) {
+    var elmVideo = arVideos[i];
+    elmVideo.autoplay = false;
+}
+var v = document.getElementById("movie");
+v.onclick = function () {
+    if (v.paused) {
+        v.play();
+    } else {
+        v.pause();
+    }
+};
