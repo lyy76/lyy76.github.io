@@ -29,9 +29,9 @@ $(document).ready(function () {
     $('form').submit(function (e) {
         e.preventDefault();
 
-        /*  if (!$(this).valid()) {
+        if (!$(this).valid()) {
             return;
-         } */
+        }
 
         $.ajax({
             type: "POST",
@@ -39,7 +39,7 @@ $(document).ready(function () {
             data: $(this).serialize()
         }).done(function () {
             $(this).find("input").val("");
-            /*  $('#contacts, #order').fadeOut(); */
+            $('#contacts-form').fadeOut();
             $('.overlay, #thanks').fadeIn('slow');
 
             $('form').trigger('reset');
