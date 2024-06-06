@@ -131,8 +131,7 @@ function validateForms(form) {
     });
 };
 
-/* validateForms('#consultation-form');
-validateForms('#write-form'); */
+
 validateForms('#consultation form');
 validateForms('#order form');
 
