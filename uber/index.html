@@ -15,7 +15,7 @@
 
 <body>
 
-    <header>
+    <header id="up">
         <nav>
             <div class="container">
                 <ul class="menu">
@@ -48,7 +48,7 @@
 
                     <div class="col-6 col-md-3 col-lg-2">
                         <a href="tel:80480000000" class="xs-visible subheader_phone">8 048 000 00 00</a>
-                        <button class="subheader_btn">заказать звонок</button>
+                        <button data-modal="consultation" class="subheader_btn">заказать звонок</button>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                         Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе Одесса. Водители
                         у нас
                         зарабатывают от 20000 - 40000 грн в месяц.</div>
-                    <button class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
+                    <button data-modal="order" class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
                 </div>
             </div>
         </div>
@@ -393,6 +393,69 @@
 
     </footer>
 
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal_close">&times;</div>
+            <div class="modal_subtitle">Просто заполните форму обращения</div>
+            <div class="modal_descr">и мы перезвоним вам в течении 10 минут</div>
+            <form class="form" action="#">
+
+                <input required name="name" type="text" id="name" class="form_input form_input-name" autocomplete="off"
+                    placeholder=" ">
+                <label for="name" class="form_label form_label-name">Ваше имя...</label>
+                <input required name="phone" id="phone" class="form_input form_input-phone" autocomplete="off"
+                    placeholder=" ">
+                <label for="phone" class="form_label form_label-phone">Ваш телефон...</label>
+
+                <button class="promo_btn form_submit">заказать звонок</button>
+
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal_close">&times;</div>
+            <div class="modal_subtitle">Ваша заявка</div>
+            <div class="modal_descr">наш менеджер свяжется с Вами после обработки Вашей заявки</div>
+            <form class="form" action="#">
+
+                <input required name="name" type="text" id="name" class="form_input form_input-name" autocomplete="off"
+                    placeholder=" ">
+                <label for="name" class="form_label form_label-name">Ваше имя...</label>
+                <input required name="phone" id="phone" class="form_input form_input-phone" autocomplete="off"
+                    placeholder=" ">
+                <label for="phone" class="form_label form_label-phone">Ваш телефон...</label>
+                <input required name="email" type="email" id="email" class="form_input form_input-email"
+                    autocomplete="off" placeholder=" ">
+                <label for="email" class="form_label form_label-email">Ваш E-mail...</label>
+
+                <button class="promo_btn form_submit">ОТПРАВИТЬ ЗАЯВКУ!</button>
+
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal_close">&times;</div>
+            <div class="modal_subtitle">Спасибо за Ваше обращение!</div>
+            <div class="modal_descr">Наш менеджер свяжется с вами<br>в ближайшее время!</div>
+        </div>
+    </div>
+
+
+    <a href="#up" class="pageup">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-circle-up"
+            class="svg-inline--fa fa-chevron-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512">
+            <path fill="#1eacc7"
+                d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z">
+            </path>
+        </svg>
+    </a>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
