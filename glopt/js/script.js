@@ -15,7 +15,7 @@ list.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
-time_is_widget.init({ Kyiv_TV_Tower_z700: { template: "TIME<br>DATE", date_format: "dayname daynum.monthnum.yy" } });
+time_is_widget.init({ Odesa_z713: { template: "TIME<br>DATE", date_format: "dayname daynum.monthnum.yy" } });
 
 $(document).ready(function () {
     $('.carousel__inner').slick({
