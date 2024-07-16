@@ -4,6 +4,7 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 $text = $_POST['text'];
+$services = $_POST['services'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -15,12 +16,12 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'iskra.od@gmail.com';                 // Наш логин
-$mail->Password = ' ';                                 // Наш пароль от ящика
+$mail->Password = 'whxnncuewvinzgxv';                  // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('iskra.od@gmail.com', 'Pulse');   // От кого письмо 
-$mail->addAddress('');                           // Add a recipient
+$mail->setFrom('iskra.od@gmail.com', 'GloPT');   // От кого письмо 
+$mail->addAddress('xr007@outlook.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -32,6 +33,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'Данные';
 $mail->Body    = '
 		Пользователь оставил данные <br> 
+	Нужен прайс по: ' . $services . ' <br>
 	Имя: ' . $name . ' <br>
 	Номер телефона: ' . $phone . '<br>
 	E-mail: ' . $email . ' <br>
