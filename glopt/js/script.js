@@ -157,6 +157,10 @@ function validateForms(form) {
             email: {
                 required: true,
                 email: true
+            },
+            text: {
+                required: true,
+                minlength: 10
             }
         },
         messages: {
@@ -169,6 +173,10 @@ function validateForms(form) {
             email: {
                 required: "введите свою почту",
                 email: "email в формате name@domain.com"
+            },
+            text: {
+                required: "введите Ваше сообщение",
+                minlength: jQuery.validator.format("Enter {0} character!")
             }
         }
     });
@@ -179,6 +187,8 @@ validateForms('#write-form'); */
 validateForms('#consultation form');
 validateForms('#calculation form');
 validateForms('#order form');
+validateForms('#consultation-form');
+validateForms('#write-form');
 
 $('input[name=phone]').mask("+38 (999) 999-99-99");
 
