@@ -22,6 +22,43 @@ counters.forEach((item, i) => {
     lines[i].style.width = item.innerHTML;
 });
 
+function validateForms(form) {
+    $(form).validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            text: {
+                required: true,
+                minlength: 10
+            },
+            policy: "required"
+        },
+        messages: {
+            name: {
+                required: "введите свое имя",
+                minlength: jQuery.validator.format("Введите {0} символа!")
+            },
+            email: {
+                required: "введите свою почту",
+                email: "email в формате name@domain.com"
+            },
+            text: {
+                required: "введите Ваше сообщение",
+                minlength: jQuery.validator.format("Введите {0} символов!")
+            },
+            policy: "выполните условие"
+        }
+    });
+};
+
+validateForms('#contacts-form');
+
 $(document).ready(function () {
     $('.modal__close').on('click', function () {
         $('.overlay, #thanks').fadeOut('slow');
